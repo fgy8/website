@@ -1,0 +1,490 @@
+
+@main_color: #ababab;
+
+@body_background: #ffffff;
+@body_color: #444444;
+@body_font: 'Roboto Condensed', serif;
+@body_size: 17px;
+@body_line_height: 28px;
+
+@title_font: 'Fjalla One', sans-serif;
+@title_color: #121212;
+@title_line_height: 45px;
+@title_size: 40px;
+
+@menu_font: 'Slabo 27px', serif;
+@menu_size: 12px;
+@menu_color: #ffffff;
+@menu_line_height: 24px;
+@menu_background: #000000;
+
+@post_background: #ffffff;
+.translateXY(@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	-moz-transform: translate(@x, @y);
+	transform: translate(@x, @y);
+}
+
+.translateX(@x) {
+	-webkit-transform: translateX(@x);
+	-moz-transform: translateX(@x);
+	transform: translateX(@x);
+}
+
+.translateY(@y) {
+	-webkit-transform: translateY(@y);
+	-moz-transform: translateY(@y);
+	transform: translateY(@y);
+}
+
+.transform(@text) {
+	-webkit-transform: @text;
+	-moz-transform: @text;
+	transform: @text;
+}
+
+.transition(@text) {
+	-webkit-transition: @text;
+	-moz-transition: @text;
+	-ms-transition: @text;
+	-o-transition: @text;
+	transition: @text;
+}
+
+.transition2(@text1, @text2) {
+	-webkit-transition: @text1, @text2;
+	-moz-transition: @text1, @text2;
+	-ms-transition: @text1, @text2;
+	-o-transition: @text1, @text2;
+	transition: @text1, @text2;
+}
+
+.transition3(@text1, @text2, @text3) {
+	-webkit-transition: @text1, @text2, @text3;
+	-moz-transition: @text1, @text2, @text3;
+	-ms-transition: @text1, @text2, @text3;
+	-o-transition: @text1, @text2, @text3;
+	transition: @text1, @text2, @text3;
+}
+
+.animation(@text) {
+	-webkit-animation: @text;
+	-moz-animation: @text;
+	-ms-animation: @text;
+	-o-animation: @text;
+	animation: @text;
+}
+
+.animation_delay(@text) {
+	-webkit-animation-delay: @text;
+	-moz-animation-delay: @text;
+	-ms-animation-delay: @text;
+	-o-animation-delay: @text;
+	animation-delay: @text;
+}
+
+.clearfix() {
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+/* =========== 1. Reset CSS  =========== */
+img, legend {
+	border: 0;
+}
+
+legend, td, th {
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+audio, canvas, progress, video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden], template {
+	display: none;
+}
+
+a {
+	color: #000000;
+	background-color: transparent;
+
+	&:hover, &:active {
+		outline: 0;
+	}
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b, optgroup, strong {
+	font-weight: 700;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+mark {
+	background: @body_background;
+	color: @body_color;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre, textarea {
+	overflow: auto;
+}
+
+code, kbd, pre, samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button, select {
+	text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	border-radius: 0;
+	line-height: normal;
+}
+
+input[type=checkbox], input[type=radio] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid @body_color;
+	margin: 0 2px;
+	padding: .35em .625em .75em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,
+input,
+textarea,
+button,
+select {
+	outline: none;
+}
+
+a:hover,
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+	outline: none !important;
+	text-decoration: none;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:after, :before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: @body_color;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color: @body_color;
+}
+
+/* =========== 2. Typography  =========== */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: @title_font;
+	color: #000000;
+	font-weight: 400;
+	line-height: 1.2em;
+	letter-spacing: 0;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+h1 > a, .h1 > a, h2 > a, .h2 > a, h3 > a, .h3 > a, h4 > a, .h4 > a, h5 > a, .h5 > a, h6 > a, .h6 > a {
+	color: inherit;
+}
+
+h1, .h1 {
+	font-size: 36px;
+}
+
+h2, .h2 {
+	font-size: 30px;
+}
+
+h3, .h3 {
+	font-size: 26px;
+}
+
+h4, .h4 {
+	font-size: 22px;
+}
+
+h5, .h5 {
+	font-size: 18px;
+}
+
+h6, .h6 {
+	font-size: 14px;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+	.transition(all 0.3s ease);
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: @main_color !important;
+	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+code, kbd, pre, samp {
+	font-family: @body_font;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+}
+
+code {
+	background-color: #eee;
+	letter-spacing: 0.015em;
+}
+
+abbr {
+	background-color: #A1D71A;
+	color: #111;
+	border-width: 2px;
+}
+
+mark, .mark {
+	color: @body_background;
+	background-color: #a4b4c4;
+}
+
+dfn {
+	border-bottom: 1px dashed;
+}
+
+cite {
+	font-style: normal;
+}
+
+blockquote {
+	padding: 0 0 0 45px;
+	letter-spacing: 0;
+	overflow: hidden;
+	position: relative;
+	border: none;
+	font-size: @body_size;
+	margin-top: 20px;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: '\f10d';
+		font-family: 'FontAwesome';
+		display: inline-block;
+		color: @main_color;
+		font-size: 24px;
+	}
+
+	p {
+		margin-bottom: 5px;
+	}
+
+	footer, cite {
+		&:after {
+			content: ' ';
+		}
+	}
+}
+
+pre {
+	line-height: 1.8em;
+	padding: 15px;
+	border: 1px solid #E4E4E4;
+	font-style: italic;
+	overflow: auto;
+	white-space: pre-wrap;
+	background-color: #f7f7f7;
+	word-wrap: break-word;
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+}
+
+input[type="search"], input[type="text"], input[type="url"], input[type="number"], input[type="password"], input[type="email"], input[type="file"], textarea {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #dddddd;
+	padding: 0 15px;
+	.transition(all 0.3s ease);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+
+	&::-webkit-input-placeholder {
+		color: #ababab;
+	}
+	&::-moz-placeholder {
+		color: #ababab;
+	}
+	&:-ms-input-placeholder {
+		color: #ababab;
+	}
+	&:-moz-placeholder {
+		color: #ababab;
+	}
+}
+
+select {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #999999;
+	padding: 0 15px;
+	.transition(all 0.3s ease);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+iframe {
+	border: 0;
+	max-width: 100%;
+}
+.image {
+	background-color: #eeeeee;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 60%;
+	>a >img, >img {
+		display: none !important;
+	}
+}
